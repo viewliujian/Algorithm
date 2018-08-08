@@ -25,15 +25,15 @@
    在博弈树的每一层，需要扫描其子节点，扫描时要保存极大值还是极小值取决于该哪个玩家行棋————我们，则保存极大值；对手，则保存极小值。
    因为这些值以轮换的方式向上传递，所以要保存极小值中的最大值或极大值中的最小值。也就是说，假设每个玩家都会选择对他有利的方行棋案。
  
-> 三. 用于博弈树搜索的极小极大基本算法<b>&#160;&#160;&#160;以井字棋为例</b>
+> 三. 用于博弈树搜索的极小极大基本算法<b>&#160;&#160;以井字棋为例</b>
 ```cpp
- 6. minimax(player, board)
-     if(game_won(player, board)) return 胜利
-     for 每个随后的棋局
-         if（player == X）return 随后的估值最大的棋局
-         if（player == O）return 随后的估值最小的棋局
-     end
-  end
+minimax(player, board)
+    if(game_won(player, board)) return 胜利
+        for 每个随后的棋局
+            if（player == X）return 随后的估值最大的棋局
+            if（player == O）return 随后的估值最小的棋局
+        end
+    end
 ```
 > 四. 关键点
         
